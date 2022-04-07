@@ -1,0 +1,702 @@
+/* google fonts imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    /* font-family: 'Sora', sans-serif;
+    font-family: 'poppins', sans-serif; */
+}
+
+
+/* scroll bar styling */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 30px !important;
+    background: linear-gradient(to right, #ffffff, #deffe2);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 30px !important;
+}
+
+:root {
+    --green: #89EC08;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+
+/* back to top */
+
+#Top {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--green);
+    color: var(--white);
+    z-index: 10;
+    font-size: 30px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.showTop {
+    transition: 0.5s ease-in-out !important;
+    opacity: 1 !important;
+}
+
+
+/* preloader */
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: var(--white);
+    top: 0px;
+    z-index: 999;
+}
+
+#preloader .box1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#preloader img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #2df20a;
+    animation-name: ripple;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 var(--green), 0 0 0 0 var(--green);
+    }
+    80% {
+        box-shadow: 0 0 0 20px #36d648, 0 0 0 40px #36d648;
+    }
+    100% {
+        box-shadow: 0 0 0 20px #2df20a, 0 0 0 40px #2df20a;
+    }
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .textBox {
+    position: relative;
+    top: 200px;
+}
+
+.header .btn1 {
+    width: 180px;
+    height: 45px;
+    margin-top: 10px;
+    border: none;
+    background: var(--green);
+    color: var(--white);
+    font-family: 'poppins', sans-serif;
+    border-radius: 20px;
+}
+
+
+/* navigation */
+
+.navbar {
+    background: var(--white);
+    padding: 5px 40px !important;
+    z-index: 10 !important;
+    box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-brand img {
+    width: 50px;
+}
+
+.nav-link {
+    font-family: 'poppins', sans-serif!important;
+    color: var(--black);
+    transition: 0.5s;
+}
+
+.navbar .nav-link.active {
+    color: var(--green)!important;
+}
+
+.nav-link:hover {
+    color: var(--green);
+    transition: 0.5s;
+}
+
+.download-btn {
+    background: var(--green) !important;
+    width: 130px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: var(--white);
+    font-family: 'poppins', sans-serif;
+}
+
+
+/* .header .textBox {
+    margin-top: 3.5rem;
+    margin-left: 3rem;
+} */
+
+.header .textBox h1 {
+    font-size: 5rem;
+    font-family: 'Sora', sans-serif;
+}
+
+.header .textBox h2 {
+    font-size: 2.5rem;
+    font-family: 'poppins', sans-serif;
+    margin-top: 13px;
+}
+
+.color {
+    color: var(--green);
+}
+
+.ri-menu-line {
+    color: var(--green);
+    font-size: 25px !important;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: #deffe2;
+    padding: 25px 0;
+}
+
+.about .image {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.about .image img {
+    width: 100px;
+}
+
+.about h1 {
+    padding-top: 5px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.about .title {
+    font-size: 2rem;
+    font-family: 'Sora', sans-serif;
+}
+
+.about p {
+    padding-top: 10px;
+    font-family: 'poppins', sans-serif;
+}
+
+.about .app_2 {
+    width: 280px;
+}
+
+.about .social {
+    margin-top: 25px;
+}
+
+.about .social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    outline: none;
+    background: #fff;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+
+.about .social button:hover {
+    transition: all 0.5s;
+    transform: translateY(-10px);
+}
+
+.about .social button i {
+    font-size: 20px;
+    color: var(--green);
+}
+
+
+/* SERVICE */
+
+.service {
+    padding: 35px 0;
+}
+
+.service h1 {
+    padding: 25px;
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 30px;
+    color: var(--green);
+}
+
+.service .image {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.service .image img {
+    width: 100px;
+}
+
+.box {
+    background: var(--white);
+    width: 300px;
+    height: 250px;
+    padding: 30px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.5s !important;
+}
+
+.box:hover {
+    transition: all 0.5s !important;
+    border: 1px solid var(--green);
+}
+
+.boss {
+    border: 1px solid var(--green);
+}
+
+.box img {
+    width: 70px;
+}
+
+.box h2 {
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* TEAM */
+
+.team {
+    padding: 25px;
+    height: auto;
+    background: linear-gradient(to right, #ffffff, #deffe2);
+}
+
+.team .image {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.team .image img {
+    width: 100px;
+}
+
+.team h1.pop {
+    text-align: center;
+    color: var(--green) !important;
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.group {
+    margin-top: 20px;
+}
+
+.group img {
+    width: 100%;
+}
+
+.topic1 h2 {
+    font-family: 'sora', sans-serif;
+    padding: 15px 0;
+}
+
+.topic1 p,
+.topic1 li {
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
+}
+
+
+/* GALLERY */
+
+.gallery {
+    padding: 25px;
+}
+
+.gallery .image {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.gallery .image img {
+    width: 100px;
+}
+
+.gallery h1 {
+    text-align: center;
+    color: var(--green);
+    font-size: 30px;
+    font-family: 'sora', sans-serif;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.app {
+    width: 100%;
+    margin-top: 30px;
+    padding: 25px 0;
+    background: linear-gradient(to right, #ffffff, #deffe2);
+}
+
+.app h1 {
+    font-size: 40px;
+    font-family: 'sora', sans-serif;
+    color: var(--green);
+    margin-top: 30px;
+}
+
+
+/* 
+.owl-carousel {
+    z-index: -1 !important;
+}
+
+.item {
+    z-index: 1 !important;
+} */
+
+.app .desktop img {
+    width: 100%;
+}
+
+.sec {
+    margin-top: 20px;
+}
+
+.brand {
+    width: 200px;
+}
+
+
+/* FAQS */
+
+.faq {
+    width: 100%;
+    padding: 35px 0px;
+}
+
+.faq .image {
+    display: flex;
+    justify-content: center;
+}
+
+.faq_img {
+    width: 100%;
+}
+
+.faq .image img {
+    width: 100px;
+}
+
+.faq h1 {
+    font-size: 40px;
+    font-family: 'sora', sans-serif;
+    text-align: center;
+    color: var(--green);
+}
+
+.accordion {
+    width: 100%;
+    position: relative;
+    top: 55px;
+    padding: 25px 0px;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: 10px;
+    background: #deffe2;
+    color: var(--black);
+    font-family: 'poppins', sans-serif;
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    background: var(--white);
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
+}
+
+.accordion .contentBx.tog .label::before {
+    content: '-';
+}
+
+.accordion .contentBx.tog .content {
+    height: 100px;
+    padding: 10px;
+}
+
+
+/* contact */
+
+.contact {
+    width: 100%;
+    background: #deffe2;
+    padding: 35px 0px;
+}
+
+.contact h3 {
+    font-size: 20px;
+    font-family: 'sora', sans-serif;
+}
+
+.contact p {
+    font-size: 15px;
+}
+
+.input_field {
+    display: flex;
+}
+
+.input_field input {
+    width: 70%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    caret-color: var(--green);
+    font-family: 'poppins', sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.submit {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.submit:hover {
+    background: var(--green);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.conatct .social {
+    margin-top: 25px;
+}
+
+.contact .social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    outline: none;
+    background: #fff;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+
+.contact .social button:hover {
+    transition: all 0.5s;
+    transform: translateY(-10px);
+}
+
+.contact .social button i {
+    font-size: 20px;
+    color: var(--green);
+}
+
+.QRcode {
+    width: 200px;
+    margin: 20px 0px;
+}
+
+.para p {
+    padding: 0;
+    margin: 5px;
+}
+
+.footer_link li {
+    list-style: none;
+}
+
+.footer_link li a {
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    color: var(--black);
+}
+
+footer {
+    padding: 5px 0px;
+    text-align: center;
+    font-family: 'sora', sans-serif;
+    background-color: var(--green);
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Media queries */
+
+@media (max-width: 469px) {
+    .header .textBox h1 {
+        color: red;
+        font-size: 2.5rem;
+    }
+    .header .textBox h2 {
+        font-size: 1.5rem;
+    }
+    .header .textBox {
+        position: relative;
+        top: 150px;
+    }
+    .navbar {
+        padding: 5px 10px;
+    }
+    .header {
+        background-position: center;
+        height: 75vh;
+    }
+    .about h1 {
+        font-size: 2rem;
+    }
+    .about .app_2 {
+        width: 200px;
+    }
+    .about .title {
+        margin-top: 20px;
+    }
+    .about .social button {
+        width: 30px;
+        height: 30px;
+    }
+    .about .social button i {
+        font-size: 18px;
+    }
+    .box {
+        width: 100%;
+    }
+    .box h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .group img {
+        width: 100%;
+    }
+    .topic1 {
+        width: 100%;
+    }
+    .topic1 h2 {
+        font-size: 25px;
+        color: var(--green);
+    }
+    .topic1 p {
+        font-size: 14px;
+    }
+    .brand {
+        width: 100px;
+    }
+    .desktop {
+        margin-top: 20px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header .textBox h1 {
+        font-size: 3rem;
+    }
+    .header .textBox h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .image {
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+    }
+    .image img {
+        width: 100px !important;
+    }
+}
